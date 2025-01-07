@@ -21,9 +21,6 @@ import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
-import { formatDate } from '@/lib/formatDate'
-import { generateRssFeed } from '@/lib/generateRssFeed'
-import { getAllArticles } from '@/lib/getAllArticles'
 
 function MailIcon(props) {
   return (
@@ -83,7 +80,7 @@ function ArrowDownIcon(props) {
     </svg>
   )
 }
-
+/*
 function Article({ article }) {
   return (
     <Card as="article">
@@ -98,7 +95,7 @@ function Article({ article }) {
     </Card>
   )
 }
-
+*/
 function SocialLink({ icon: Icon, ...props }) {
   return (
     <Link className="group -m-1 p-1" {...props}>
@@ -106,7 +103,7 @@ function SocialLink({ icon: Icon, ...props }) {
     </Link>
   )
 }
-
+/*
 function Newsletter() {
   return (
     <form
@@ -135,7 +132,7 @@ function Newsletter() {
     </form>
   )
 }
-
+*/
 function Resume() {
   let resume = [
     {
@@ -246,7 +243,7 @@ function Photos() {
   )
 }
 
-export default function Home({ articles }) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -296,31 +293,11 @@ export default function Home({ articles }) {
       <Photos />
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))}
-          </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
             <Resume />
           </div>
         </div>
       </Container>
     </>
   )
-}
-
-export async function getStaticProps() {
-  if (process.env.NODE_ENV === 'production') {
-    await generateRssFeed()
-  }
-
-  return {
-    props: {
-      articles: (await getAllArticles())
-        .slice(0, 4)
-        .map(({ component, ...meta }) => meta),
-    },
-  }
 }
