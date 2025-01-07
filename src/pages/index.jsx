@@ -103,7 +103,7 @@ function SocialLink({ icon: Icon, ...props }) {
     </Link>
   )
 }
-/*
+
 function Newsletter() {
   return (
     <form
@@ -132,9 +132,10 @@ function Newsletter() {
     </form>
   )
 }
-*/
+
 function Resume() {
   let resume = [
+    /*
     {
       company: 'Planetaria',
       title: 'CEO',
@@ -165,7 +166,7 @@ function Resume() {
       logo: logoStarbucks,
       start: '2008',
       end: '2011',
-    },
+    },*/
   ]
 
   return (
@@ -247,12 +248,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>
-          Tiago Agostinho - Software developer, founder, and car entusiast
-        </title>
+        <title>Tiago Agostinho - Software developer, and car entusiast</title>
         <meta
           name="description"
-          content="I’m Tiago, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
+          content="I'm Tiago, a software developer and entrepreneur based in Lisbon. I specialize in helping small businesses improve their operations with tailor-made web applications. My mission is to empower business owners to streamline processes, reduce costs, and achieve sustainable growth with solutions designed to fit their unique needs."
         />
       </Head>
       <Container className="mt-9">
@@ -261,10 +260,12 @@ export default function Home() {
             Software designer, founder, and amateur astronaut.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Tiago, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            I'm Tiago, a software developer and entrepreneur based in Lisbon. I
+            specialize in helping small businesses improve their operations with
+            tailor-made web applications. My mission is to empower business
+            owners to streamline processes, reduce costs, and achieve
+            sustainable growth with solutions designed to fit their unique
+            needs.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
