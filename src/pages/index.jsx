@@ -209,7 +209,11 @@ function Resume() {
           </li>
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
+      <Button
+        href="/CV_TiagoAgostinho.pdf"
+        variant="secondary"
+        className="group mt-6 w-full"
+      >
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
@@ -251,16 +255,16 @@ export default function Home() {
         <title>Tiago Agostinho - Software developer, and car entusiast</title>
         <meta
           name="description"
-          content="I'm Tiago, a software developer and entrepreneur based in Lisbon. I specialize in helping small businesses improve their operations with tailor-made web applications. My mission is to empower business owners to streamline processes, reduce costs, and achieve sustainable growth with solutions designed to fit their unique needs."
+          content="I’m Tiago, a software developer and entrepreneur based in Lisbon. I specialize in helping small businesses improve their operations with tailor-made web applications. My mission is to empower business owners to streamline processes, reduce costs, and achieve sustainable growth with solutions designed to fit their unique needs."
         />
       </Head>
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Software designer, founder, and amateur astronaut.
+            Software developer, and car entusiast.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I'm Tiago, a software developer and entrepreneur based in Lisbon. I
+            I’m Tiago, a software developer and entrepreneur based in Lisbon. I
             specialize in helping small businesses improve their operations with
             tailor-made web applications. My mission is to empower business
             owners to streamline processes, reduce costs, and achieve
