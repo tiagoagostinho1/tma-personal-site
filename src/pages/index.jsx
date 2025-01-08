@@ -22,6 +22,22 @@ import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
 
+const onButtonClick = () => {
+  // using Java Script method to get PDF file
+  fetch('/CV_TiagoAgostinho.pdf').then((response) => {
+    response.blob().then((blob) => {
+      // Creating new object of PDF file
+      const fileURL = window.URL.createObjectURL(blob)
+
+      // Setting various property values
+      let alink = document.createElement('a')
+      alink.href = fileURL
+      alink.download = 'CV_TiagoAgostinho.pdf'
+      alink.click()
+    })
+  })
+}
+
 function MailIcon(props) {
   return (
     <svg
@@ -210,9 +226,9 @@ function Resume() {
         ))}
       </ol>
       <Button
-        href="/CV_TiagoAgostinho.pdf"
         variant="secondary"
         className="group mt-6 w-full"
+        onClick={onButtonClick}
       >
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
