@@ -271,7 +271,7 @@ export default function Home() {
         <title>Tiago Agostinho - Software developer, and car entusiast</title>
         <meta
           name="description"
-          content="I’m Tiago, a software developer and entrepreneur based in Lisbon. I specialize in helping small businesses improve their operations with tailor-made web applications. My mission is to empower business owners to streamline processes, reduce costs, and achieve sustainable growth with solutions designed to fit their unique needs."
+          content="I’m Tiago, a software developer and entrepreneur based in Alenquer. I specialize in helping small businesses improve their operations with tailor-made web applications. My mission is to empower business owners to streamline processes, reduce costs, and achieve sustainable growth with solutions designed to fit their unique needs."
         />
       </Head>
       <Container className="mt-9">
@@ -280,9 +280,9 @@ export default function Home() {
             Software developer, and car entusiast.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Tiago, a software developer and entrepreneur based in Lisbon. I
-            specialize in helping small businesses improve their operations with
-            tailor-made web applications. My mission is to empower business
+            I’m Tiago, a software developer and entrepreneur based in Alenquer.
+            I specialize in helping small businesses improve their operations
+            with tailor-made web applications. My mission is to empower business
             owners to streamline processes, reduce costs, and achieve
             sustainable growth with solutions designed to fit their unique
             needs.
