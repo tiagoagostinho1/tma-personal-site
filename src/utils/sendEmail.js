@@ -4,11 +4,12 @@ export function sendEmail(data) {
   const apiEndpoint =
     'https://tiagomiguelagostinho.outsystemscloud.com/Emailchecking_API/rest/SendEmail/SendContactEmail'
 
-  fetch(apiEndpoint, {
+  fetch(process.env.EMAIL_ENDPOINT, {
     method: 'POST',
     headers: {
       Accept: 'application/json, text/plain',
       'Content-Type': 'application/json;charset=UTF-8',
+      'x-token': process.env.EMAIL_TOKEN,
     },
     body: JSON.stringify(data),
   })
