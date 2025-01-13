@@ -7,7 +7,7 @@ const nextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx'],
   reactStrictMode: true,
   experimental: {
-    scrollRestoration: true,
+    scrollRestoration: true,  esmExternals: false,
     //appDir: true,
   },
 }

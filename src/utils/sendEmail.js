@@ -1,15 +1,13 @@
 export function sendEmail(data) {
-  console.log(data)
-
   const apiEndpoint =
     'https://tiagomiguelagostinho.outsystemscloud.com/Emailchecking_API/rest/SendEmail/SendContactEmail'
 
-  fetch(process.env.EMAIL_ENDPOINT, {
+  fetch(apiEndpoint, {
     method: 'POST',
     headers: {
       Accept: 'application/json, text/plain',
       'Content-Type': 'application/json;charset=UTF-8',
-      'x-token': process.env.EMAIL_TOKEN,
+      'x-token': '1dc355b9-582f-4b9e-8146-5b47067c3fda',
     },
     body: JSON.stringify(data),
   })
