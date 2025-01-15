@@ -9,7 +9,7 @@ export function sendEmail(data) {
     headers: {
       Accept: '*/*',
       'Content-Type': 'application/json',
-      'x-token': '1dc355b9-582f-4b9e-8146-5b47067c3fda',
+      'x-token': process.env.NEXT_PUBLIC_EMAIL_TOKEN,
     },
   })
 
@@ -17,24 +17,5 @@ export function sendEmail(data) {
     '/rest/SendEmail/SendContactEmail',
     JSON.stringify(data)
   )
-  console.log(response)
   return response
-  /*
-  fetch(apiEndpoint, {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json, text/plain',
-      'Content-Type': 'application/json;charset=UTF-8',
-      'x-token': '1dc355b9-582f-4b9e-8146-5b47067c3fda',
-    },
-    body: JSON.stringify(data),
-  })
-    .then((res) => res.json())
-    .then((response) => {
-      console.log(response)
-    })
-    .catch((err) => {
-      console.error(err)
-    })
-      */
 }
