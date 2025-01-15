@@ -16,8 +16,6 @@ export function ContactForm() {
   const router = useRouter()
 
   function onSubmit(data) {
-    router.push('/thank-you')
-    /*
     setIsLoading(true)
     sendEmail(data)
       .then(() => {
@@ -26,7 +24,7 @@ export function ContactForm() {
       })
       .catch(() => {
         setIsLoading(false)
-      })*/
+      })
   }
 
   return (
