@@ -1,21 +1,23 @@
 import Head from 'next/head'
 
 import { SimpleLayout } from '@/components/SimpleLayout'
+import { Button } from '@/components/Button'
 
 export default function ThankYou() {
   return (
     <>
       <Head>
-        <title>You’re subscribed - Tiago Agostinho</title>
-        <meta
-          name="description"
-          content="Thanks for subscribing to my newsletter."
-        />
+        <title>You’re contacted - Tiago Agostinho</title>
+        <meta name="description" content="Thanks for your contact." />
       </Head>
       <SimpleLayout
-        title="Thanks for subscribing."
-        intro="I’ll send you an email any time I publish a new blog post, release a new project, or have anything interesting to share that I think you’d want to hear about. You can unsubscribe at any time, no hard feelings."
-      />
+        title="Thanks for your contact."
+        intro="Thank you for reaching out! I’ve received your message and will get back to you as soon as possible."
+      >
+        <Button variant="secondary" href="/">
+          Get back to homepage
+        </Button>
+      </SimpleLayout>
     </>
   )
 }

@@ -2,6 +2,9 @@
 import { Button } from './Button'
 import { useForm } from 'react-hook-form'
 import { sendEmail } from '@/utils/sendEmail'
+import { useState } from 'react'
+import { LoadingSpinner } from './LoadingSpinner'
+import { useRouter } from 'next/navigation'
 
 export function ContactForm() {
   const inputsClasses =
@@ -9,9 +12,21 @@ export function ContactForm() {
   const labelClasses =
     'block text-sm/6 font-semibold text-gray-900 dark:text-zinc-100'
   const { register, handleSubmit } = useForm()
+  const [isLoading, setIsLoading] = useState(false)
+  const router = useRouter()
 
   function onSubmit(data) {
+    router.push('/thank-you')
+    /*
+    setIsLoading(true)
     sendEmail(data)
+      .then(() => {
+        setIsLoading(false)
+        router.push('/thank-you')
+      })
+      .catch(() => {
+        setIsLoading(false)
+      })*/
   }
 
   return (
@@ -69,7 +84,8 @@ export function ContactForm() {
       </div>
       <div className="mt-10">
         <Button type="submit" className="w-full">
-          Lets talk
+          <LoadingSpinner isLoading={isLoading} />
+          Let´s talk
         </Button>
       </div>
     </form>
